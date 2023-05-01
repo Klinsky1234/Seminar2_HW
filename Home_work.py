@@ -31,20 +31,20 @@ def HW_task3():
 # HW_task3()
 
 
-# Задача 4. Задайте список из N элементов, заполненных числами из промежутка [-N, N]. Сдвиньте все элементы
-# списка на 2 позиции вправо. 3 -> [2, 3, -3, -2, -1, 0, 1]
+# Задача 4. Задайте список из N элементов, заполненных числами из промежутка [-N, N].
+# Сдвиньте все элементы списка на 2 позиции вправо. 3 -> [2, 3, -3, -2, -1, 0, 1]
 def HW_task4():
     list = []
-    new_list = []
     n = int(input("Enter number N: "))
     step = int(input("Enter step: "))
     for i in range(-n, n + 1):
         list.append(i)
     print(f"list -> {list}")
-    for j in range(len(list)):
-        n = list[j] + step
-        new_list.append(n)
-    print(f"\nnew list -> {new_list}")
+    print(f"new list -> ")
+    print(*(list[len(list) - step :]), *(list[: len(list) - step]), end=" ")
+
+
+HW_task4()
 
 
 # Задача 2. Выведите таблицу истинности для выражения ¬(X ∧ Y) ∨ Z.
